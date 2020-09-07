@@ -1,12 +1,26 @@
 .features-list {
-  display: flex;
+  @include for-size(tablet-landscape) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-.features-list > .features-item {
-  width: calc((100% -90px) / 4);
+.features-item {
+  width: 100%;
+  margin-bottom: 30px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @include for-size(tablet-landscape) {
+    width: calc((100% - 30px) / 2);
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - 90px) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -14,7 +28,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -32,8 +46,13 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.143;
+  text-align: center;
   text-transform: uppercase;
   color: $primary-title-color;
+
+  @include for-size(tablet-landscape) {
+    text-align: start;
+  }
 }
 
 .features p {
