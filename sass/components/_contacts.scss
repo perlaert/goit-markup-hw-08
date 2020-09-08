@@ -1,9 +1,20 @@
 .contacts {
-  display: flex;
-  margin-left: auto;
+  display: none;
 
-  .item + .item {
-    margin-left: 30px;
+  @include for-size(tablet-landscape) {
+    display: block;
+    margin-left: auto;
+    .item + .item {
+      margin-top: 10px;
+    }
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    .item + .item {
+      margin-left: 30px;
+      margin-top: 0;
+    }
   }
 }
 

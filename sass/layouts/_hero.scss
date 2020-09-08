@@ -15,20 +15,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 696px;
+    max-width: 360px;
     margin: auto;
+
+    @include for-size(desktop) {
+      max-width: 696px;
+    }
   }
 
   &-title {
     margin-top: 0;
     margin-bottom: 30px;
-
+    margin-right: auto;
+    margin-left: auto;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.364;
+    font-size: 26px;
+    line-height: 1.615;
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
     color: $white-color;
+
+    @include for-size(desktop) {
+      font-size: 44px;
+      line-height: 1.364;
+    }
   }
 }

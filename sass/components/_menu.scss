@@ -1,6 +1,14 @@
 .menu {
-  display: flex;
-  margin-left: 85px;
+  display: none;
+
+  @include for-size(tablet-landscape) {
+    display: flex;
+    margin-left: 88px;
+  }
+
+  @include for-size(desktop) {
+    margin-left: 93px;
+  }
 
   .item:not(:last-child) {
     margin-right: 50px;
@@ -38,5 +46,51 @@
     width: 100%;
     height: 4px;
     background: $accept-color;
+  }
+}
+
+.btn-menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.btn-menu .icon-crosse {
+  display: none;
+}
+
+.btn-menu.is-open .icon-crosse {
+  display: block;
+}
+
+.btn-menu.is-open .icon-menu {
+  display: none;
+}
+
+@include for-size(tablet-landscape) {
+  .btn-menu {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $white-color;
+  padding: 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+  color: $primary-title-color;
+
+  &.is-open {
+    display: block;
   }
 }

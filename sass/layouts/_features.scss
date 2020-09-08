@@ -7,7 +7,12 @@
 
 .features-item {
   width: 100%;
-  margin-bottom: 30px;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
   @include for-size(tablet-landscape) {
     width: calc((100% - 30px) / 2);
@@ -16,8 +21,16 @@
     }
   }
 
+  @media screen and (max-width: 1199px) {
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+
   @include for-size(desktop) {
     width: calc((100% - 90px) / 4);
+    margin-bottom: 0;
+
     &:not(:last-child) {
       margin-right: 30px;
     }

@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-page">
         <nav class="header-nav">
-          <a href="./" class="logo"> <span>Web </span>Studio</a>
+          <a href="./" class="logo"> <span>Web</span>Studio</a>
+          <div class="mobile-menu" id="mobile-menu" data-menu>Menu</div>
           <ul class="menu list">
             <li class="item"><a href="./index.html" class="link current">Студия</a></li>
             <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
@@ -36,16 +37,22 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="btn-menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель моблиьного меню">
+            <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+            <use class="icon-crosse" href="./images/sprite.svg#crosse"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
     <main>
       <!--Герой-->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="hero-container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <button type="button" class="btn-main" data-modal-open>Заказать услугу</button>
         </div>
-      </section> -->
+      </section>
       <!--Преимущества-->
       <section class="features no-padding">
         <div class="container">
@@ -320,64 +327,66 @@
 
     <!-- Футер -->
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="footer-flexbox container">
-        <div class="footer-address-contacts">
-          <a href="./" class="logo logo-footer"> <span>Web </span>Studio</a>
-          <address class="address">
-            <ul class="list">
-              <li class="address-item">г. Киев, пр-т Леси Украинки, 26</li>
-              <li class="address-contacts">
-                <a href="mailto:info@devstudio.com" class="link" target="_blank" rel="noopener noreferrer"> info@devstudio.com </a>
+        <div class="footer-contacts">
+          <div class="footer-address-contacts">
+            <a href="./" class="logo logo-footer"> <span>Web</span>Studio</a>
+            <address class="address">
+              <ul class="list">
+                <li class="address-item">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="address-contacts">
+                  <a href="mailto:info@devstudio.com" class="link" target="_blank" rel="noopener noreferrer"> info@devstudio.com </a>
+                </li>
+                <li class="address-contacts">
+                  <a href="tel:+380961111111" class="link" target="_blank" rel="noopener noreferrer"> +38 096 111 11 11 </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-social-contacts">
+            <p>
+              <b class="call-to-activity">Присоединяйтесь</b>
+            </p>
+            <ul class="footer-social-icons-list list">
+              <li class="footer-social-icons-item">
+                <a href="#" class="footer-social-icons-link" target="_blank" rel="noopener noreferrer" aria-label="ссылка на Инстаграм">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-contacts">
-                <a href="tel:+380961111111" class="link" target="_blank" rel="noopener noreferrer"> +38 096 111 11 11 </a>
+              <li class="footer-social-icons-item">
+                <a href="#" class="footer-social-icons-link" target="_blank" rel="noopener norefferer" aria-label="ссылка на Твиттер">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-icons-item">
+                <a href="#" class="footer-social-icons-link" target="_blank" rel="noopener norefferer" aria-label="ссылка на Фейсбук">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-icons-item">
+                <a href="#" class="footer-social-icons-link" target="_blank" rel="noopener norefferer" aria-label="ссылка на Линкэдин">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-social-contacts">
-          <p>
-            <b class="call-to-activity">Присоединяйтесь</b>
-          </p>
-          <ul class="footer-social-icons-list list">
-            <li class="footer-social-icons-item">
-              <a href="#" class="footer-social-icons-link" target="_blank" rel="noopener noreferrer" aria-label="ссылка на Инстаграм">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-icons-item">
-              <a href="#" class="footer-social-icons-link" target="_blank" rel="noopener norefferer" aria-label="ссылка на Твиттер">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-icons-item">
-              <a href="#" class="footer-social-icons-link" target="_blank" rel="noopener norefferer" aria-label="ссылка на Фейсбук">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-icons-item">
-              <a href="#" class="footer-social-icons-link" target="_blank" rel="noopener norefferer" aria-label="ссылка на Линкэдин">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="footer-form">
           <form autocomplete="off">
-            <label for="call-to-activity" class="email-form">
-              <b class="call-to-activity">Подпишитесь на рассылку</b>
+            <label for="subscription" class="call-to-activity">
+              <b>Подпишитесь на рассылку</b>
             </label>
             <div class="input-form">
-              <input id="call-to-activity" type="email" name="email" placeholder="E-mail" />
+              <input id="subscription" type="email" name="email" placeholder="E-mail" />
               <button type="submit" class="btn-footer">
                 Подписаться
                 <svg class="icon-send">
@@ -388,7 +397,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!--Модальное окно-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -438,6 +447,7 @@
         </button>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

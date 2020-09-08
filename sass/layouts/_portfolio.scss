@@ -1,18 +1,25 @@
 .portfolio {
-  margin-top: 93px;
-  margin-bottom: 94px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   padding-top: 0;
   padding-bottom: 0;
+
+  @include for-size(desktop) {
+    margin-top: 93px;
+    margin-bottom: 94px;
+  }
 }
 
 .portfolio-filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  // justify-content: center;
+  // margin-bottom: 50px;
 
-  .item:not(:last-child) {
-    margin-right: 8px;
-  }
+  // .item:not(:last-child) {
+  //   margin-right: 8px;
+  // }
 }
 
 .btn {

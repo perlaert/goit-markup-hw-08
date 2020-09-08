@@ -3,19 +3,49 @@
   color: $white-color;
 
   &-flexbox {
-    display: flex;
-    align-items: baseline;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @include for-size(desktop) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      .footer-form {
+        width: calc(50% - 15px);
+      }
+    }
+  }
+}
+
+.footer-contacts {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
   }
 
-  &-flexbox > div:not(:last-child) {
-    width: calc((50% - 45px) / 2);
+  @include for-size(desktop) {
+    width: calc((100% - 30px) / 2);
     margin-right: 30px;
+    margin-bottom: 0;
+    justify-content: start;
+  }
+}
+
+.footer-address-contacts,
+.footer-social-contacts {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    margin-bottom: 60px;
   }
 
-  &-flexbox > div:last-child {
-    width: calc(50% - 15px);
+  @include for-size(desktop) {
+    width: calc((100% - 30px) / 2);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -44,6 +74,11 @@
 
 .footer-social-icons-list {
   display: flex;
+  justify-content: center;
+
+  @include for-size(desktop) {
+    justify-content: start;
+  }
 }
 
 .footer-social-icons-item:not(:last-child) {
@@ -79,20 +114,38 @@
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer-form {
+    text-align: center;
+  }
+}
+
 .input-form {
-  display: flex;
   margin-top: 20px;
+
+  @include for-size(desktop) {
+    display: flex;
+  }
 
   input {
     display: flex;
     align-items: center;
-    max-width: 358px;
-    margin-right: 12px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 450px;
     border-radius: 4px;
-    padding: 15px 295px 16px 15px;
+    padding: 15px 0px 16px 15px;
     background-color: transparent;
     color: $footer-text-color;
     border: 1px solid rgba(255, 255, 255, 0.3);
+
+    @include for-size(desktop) {
+      max-width: 358px;
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
   }
 
   input::placeholder {
