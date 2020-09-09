@@ -468,8 +468,10 @@ section {
   }
 }
 
-section.no-padding {
-  padding-bottom: 0;
+@media (min-width: 1200px) {
+  section.no-padding {
+    padding-bottom: 0;
+  }
 }
 
 .section-title {
@@ -731,7 +733,32 @@ section.no-padding {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .portfolio-filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-filter {
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio-filter .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-filter .item:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .btn {
@@ -759,10 +786,29 @@ section.no-padding {
 }
 
 /* Карточки */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.portfolio-projects {
+  width: 100%;
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .portfolio-projects {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-projects {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+.portfolio-projects:hover, .portfolio-projects:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portolio-list {
@@ -773,25 +819,28 @@ img {
       flex-wrap: wrap;
 }
 
-.list > .portfolio-projects:not(:nth-child(3n)) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .list > .portfolio-projects:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-.list > .portfolio-projects:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .list > .portfolio-projects:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+  .list > .portfolio-projects:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
 }
 
-.portfolio-projects {
-  width: 370px;
-  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-projects:hover, .portfolio-projects:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+@media (min-width: 1200px) {
+  .list > .portfolio-projects:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .list > .portfolio-projects:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
 }
 
 .projects-thumb {
