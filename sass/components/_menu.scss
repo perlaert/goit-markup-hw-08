@@ -75,8 +75,7 @@
   }
 }
 
-.mobile-menu {
-  display: none;
+.menu-container {
   position: absolute;
   top: 100%;
   left: 0;
@@ -92,5 +91,9 @@
 
   &.is-open {
     display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    // display: none;
   }
 }

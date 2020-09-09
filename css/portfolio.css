@@ -398,6 +398,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 a {
   display: block;
   text-decoration: none;
@@ -514,18 +518,6 @@ section {
           justify-content: space-between;
 }
 
-.header-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .logo {
   padding-top: 24px;
   padding-bottom: 25px;
@@ -630,8 +622,7 @@ section {
   }
 }
 
-.mobile-menu {
-  display: none;
+.menu-container {
   position: absolute;
   top: 100%;
   left: 0;
@@ -646,7 +637,7 @@ section {
   color: #212121;
 }
 
-.mobile-menu.is-open {
+.menu-container.is-open {
   display: block;
 }
 
