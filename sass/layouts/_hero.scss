@@ -1,5 +1,6 @@
 .hero {
   display: flex;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
 
@@ -45,7 +46,7 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 360px;
-    margin: auto;
+    // margin: auto;
 
     @include for-size(desktop) {
       max-width: 696px;

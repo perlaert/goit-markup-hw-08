@@ -1,10 +1,53 @@
-.menu {
+.menu-container {
+  background-color: $white-color;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+  color: $primary-title-color;
+
   @media screen and (max-width: 767px) {
-    &.list {
-      margin-bottom: 60px;
+    display: none;
+    position: absolute;
+    top: 61px;
+    left: 0;
+    width: 100%;
+    padding: 60px 0;
+
+    &.is-open {
+      display: block;
+      z-index: 1;
     }
   }
 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .navigation {
+    margin-right: 84px;
+  }
+}
+
+@include for-size(desktop) {
+  .navigation {
+    margin-right: 305px;
+  }
+}
+
+.menu {
   @media screen and (max-width: 767px) {
     .item {
       display: inline-block;
@@ -19,13 +62,7 @@
 
   @include for-size(tablet-landscape) {
     display: flex;
-    // margin-right: 88px;
-    // justify-content: space-between;
   }
-
-  // @include for-size(desktop) {
-  //   margin-left: 93px;
-  // }
 
   @media screen and (max-width: 767px) {
     .item:not(:last-child) {
@@ -113,35 +150,5 @@
 @include for-size(tablet-landscape) {
   .btn-menu {
     display: none;
-  }
-}
-
-.menu-container {
-  background-color: $white-color;
-  text-align: center;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.167;
-  letter-spacing: 0.02em;
-  color: $primary-title-color;
-
-  @media screen and (max-width: 767px) {
-    display: none;
-    position: absolute;
-    top: 61px;
-    left: 0;
-    width: 100%;
-    padding: 60px 0;
-
-    &.is-open {
-      display: block;
-      z-index: 1;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
   }
 }
