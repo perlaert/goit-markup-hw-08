@@ -389,6 +389,12 @@ html {
           box-sizing: inherit;
 }
 
+*:focus {
+  outline-color: #2196f3;
+  outline-offset: 2px;
+  outline-style: solid;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
@@ -610,9 +616,6 @@ section {
 }
 
 @media screen and (max-width: 767px) {
-  .menu .item {
-    display: inline-block;
-  }
   .menu.list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -625,6 +628,12 @@ section {
         -ms-flex-align: center;
             align-items: center;
   }
+  .menu .item {
+    display: inline-block;
+  }
+  .menu .item:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -633,15 +642,6 @@ section {
     display: -ms-flexbox;
     display: flex;
   }
-}
-
-@media screen and (max-width: 767px) {
-  .menu .item:not(:last-child) {
-    margin-bottom: 40px;
-  }
-}
-
-@media (min-width: 768px) {
   .menu .item:not(:last-child) {
     margin-right: 50px;
   }
@@ -692,41 +692,6 @@ section {
   }
 }
 
-.btn-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background-color: transparent;
-  fill: #000000;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-menu:hover, .btn-menu:focus {
-  fill: #2196f3;
-}
-
-.btn-menu .icon-crosse {
-  display: none;
-}
-
-.btn-menu.is-open .icon-crosse {
-  display: block;
-}
-
-.btn-menu.is-open .icon-menu {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .btn-menu {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .contacts.item {
     text-align: center;
@@ -755,12 +720,6 @@ section {
 }
 
 .contacts .link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.167;
@@ -772,6 +731,12 @@ section {
 
 @media (min-width: 768px) {
   .contacts .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 14px;
     line-height: 1.143;
   }
@@ -990,6 +955,41 @@ section {
 .portfolio-projects:focus .overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.btn-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  fill: #000000;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-menu:hover, .btn-menu:focus {
+  fill: #2196f3;
+}
+
+@media (min-width: 768px) {
+  .btn-menu {
+    display: none;
+  }
+}
+
+.btn-menu .icon-crosse {
+  display: none;
+}
+
+.btn-menu.is-open .icon-crosse {
+  display: block;
+}
+
+.btn-menu.is-open .icon-menu {
+  display: none;
 }
 
 .btn-main {

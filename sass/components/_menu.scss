@@ -30,48 +30,40 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .navigation {
+.navigation {
+  @media screen and (max-width: 767px) {
     margin-bottom: 60px;
   }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .navigation {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-right: 84px;
   }
-}
 
-@include for-size(desktop) {
-  .navigation {
+  @include for-size(desktop) {
     margin-right: 305px;
   }
 }
 
 .menu {
   @media screen and (max-width: 767px) {
-    .item {
-      display: inline-block;
-    }
-
     &.list {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-  }
 
-  @include for-size(tablet-landscape) {
-    display: flex;
-  }
+    .item {
+      display: inline-block;
+    }
 
-  @media screen and (max-width: 767px) {
     .item:not(:last-child) {
       margin-bottom: 40px;
     }
   }
 
   @include for-size(tablet-landscape) {
+    display: flex;
+
     .item:not(:last-child) {
       margin-right: 50px;
     }
@@ -117,39 +109,5 @@
     @include for-size(tablet-landscape) {
       bottom: -1px;
     }
-  }
-}
-
-.btn-menu {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background-color: transparent;
-  fill: $black-color;
-
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    fill: $accept-color;
-  }
-}
-
-.btn-menu .icon-crosse {
-  display: none;
-}
-
-.btn-menu.is-open .icon-crosse {
-  display: block;
-}
-
-.btn-menu.is-open .icon-menu {
-  display: none;
-}
-
-@include for-size(tablet-landscape) {
-  .btn-menu {
-    display: none;
   }
 }

@@ -1,3 +1,35 @@
+.btn-menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  fill: $black-color;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $accept-color;
+  }
+
+  @include for-size(tablet-landscape) {
+    display: none;
+  }
+
+  .icon-crosse {
+    display: none;
+  }
+
+  &.is-open .icon-crosse {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+}
+
 .btn-main {
   /* display: inline-block; */
   border-radius: 4px;
