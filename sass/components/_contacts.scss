@@ -1,9 +1,4 @@
 .contacts {
-  // @media screen and (max-width: 767px) {
-  //   .item {
-  //     text-align: center;
-  //   }
-  // }
   @media screen and (max-width: 767px) {
     .item + .item {
       margin-top: 16px;
@@ -11,8 +6,6 @@
   }
 
   @include for-size(tablet-landscape) {
-    display: block;
-    // margin-left: auto;
     .item + .item {
       margin-top: 10px;
     }

@@ -32,7 +32,7 @@
 }
 
 .team-card {
-  width: 100%;
+  // width: 100%;
 
   @include for-size(desktop) {
     width: calc((100% - 90px) / 4);
