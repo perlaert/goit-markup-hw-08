@@ -727,6 +727,8 @@ section {
 @media screen and (max-width: 767px) {
   .contacts.item {
     text-align: center;
+  }
+  .contacts.item:last-child {
     margin-top: 16px;
   }
 }

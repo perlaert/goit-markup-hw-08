@@ -2,6 +2,10 @@
   @media screen and (max-width: 767px) {
     &.item {
       text-align: center;
+      // margin-top: 16px;
+    }
+
+    &.item:last-child {
       margin-top: 16px;
     }
   }
